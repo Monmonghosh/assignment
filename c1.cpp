@@ -1,16 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-int row=5;
-for(int i=0;i<row;i++)
-{
-for(int j=0;j<row;j++)
-{
-if(i>0 && i<row-1 && j>0 && j<row-1)
-printf(" ");
-else
-printf("*");
-}
-printf("\n");
-}
+    int d,b= 0,i = 1,remainder;
+    printf("Enter a decimal number: ");
+    scanf("%d", &d);
+    while (d != 0)
+    {
+        remainder = d % 2;
+        d/= 2;
+        b+= remainder * i;
+        i*= 10;
+    }
+    printf("Binary number: %d\n",b);
 }
